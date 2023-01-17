@@ -1,0 +1,30 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, section TEXT, aisle INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "Tweed Suit", "Men's Suits", 4, 700.00);
+INSERT INTO store VALUES (2, "Black Watch Tartan Suit", "Men's Suits", 4, 1000.00);
+INSERT INTO store VALUES (3, "The Hobbit", "Books", 1, 17.99);
+INSERT INTO store VALUES (4, "Seersucker Suit", "Men's Suits", 4, 500.00);
+INSERT INTO store VALUES (5, "Oxford Button-Down", "Men's Shirts", 2, 64.00);
+INSERT INTO store VALUES (6, "Premium Washed Shirt", "Men's Shirts", 2, 40.00);
+INSERT INTO store VALUES (7, "The Silmarillion", "Books", 1, 20.99);
+INSERT INTO store VALUES (8, "Athletic Slim Khakis", "Pants", 3, 79.99);
+INSERT INTO store VALUES (9, "Nordic Parka Jacket", "Coats & Jackets", 7, 395.00);
+INSERT INTO store VALUES (10, "Wool Peacoat Navy", "Coats & Jackets", 7, 275.00);
+INSERT INTO store VALUES (11, "Silk Tie", "Accessories", 5, 30.00);
+INSERT INTO store VALUES (12, "Tie Clip", "Accessories", 5, 17.00);
+INSERT INTO store VALUES (13, "Leather Messenger Bag", "Bags & Briefcases", 6, 300.00);
+INSERT INTO store VALUES (14, "Holy Bible", "Books", 1, 30.00);
+INSERT INTO store VALUES (15, "Aluminum Briefcase", "Bags & Briefcases", 6, 85.00);
+INSERT INTO store VALUES (16, "Catechism of the Catholic Church", "Books", 1, 80.00);
+
+SELECT * FROM store;
+
+SELECT * FROM store ORDER BY price;
+
+SELECT * FROM store WHERE aisle >=2 ORDER BY price desc;
+
+SELECT SUM(price) FROM store;
+
+SELECT aisle, SUM(price) FROM store GROUP BY aisle;
+
+SELECT * FROM store ORDER BY aisle;
